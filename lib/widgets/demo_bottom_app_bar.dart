@@ -5,10 +5,12 @@ class DemoBottomAppBar extends StatelessWidget {
     Key? key, 
     this.fabLocation = FloatingActionButtonLocation.endDocked,
     this.shape = const CircularNotchedRectangle(),
+    required this.onIconPressed,
   }) : super(key: key); 
 
   final FloatingActionButtonLocation fabLocation;
   final NotchedShape? shape;
+  final VoidCallback onIconPressed;
 
   static final List<FloatingActionButtonLocation> centerLocations =
       <FloatingActionButtonLocation>[
@@ -24,13 +26,13 @@ class DemoBottomAppBar extends StatelessWidget {
       child: IconTheme(
         data: IconThemeData(color: Theme.of(context).colorScheme.onPrimary),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             IconButton(
               tooltip: 'Open navigation menu',
               icon: const Icon(Icons.menu),
               onPressed: () {},
             ),
-            if (centerLocations.contains(fabLocation)) const Spacer(),
             IconButton(
               tooltip: 'Search',
               icon: const Icon(Icons.search),
@@ -40,6 +42,11 @@ class DemoBottomAppBar extends StatelessWidget {
               tooltip: 'Favorite',
               icon: const Icon(Icons.favorite),
               onPressed: () {},
+            ),
+            IconButton(
+              tooltip: 'Dados',
+              icon: const Icon(Icons.person),
+              onPressed: onIconPressed, 
             ),
           ],
         ),

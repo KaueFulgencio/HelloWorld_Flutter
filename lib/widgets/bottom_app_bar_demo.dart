@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:primeira_aplicacao/widgets/demo_bottom_app_bar.dart'; 
 
-
 class BottomAppBarDemo extends StatefulWidget {
   const BottomAppBarDemo({Key? key}) : super(key: key);
 
@@ -96,7 +95,7 @@ class _BottomAppBarDemoState extends State<BottomAppBarDemo> {
         floatingActionButtonLocation: _fabLocation,
         bottomNavigationBar: DemoBottomAppBar(
         fabLocation: _fabLocation,
-        shape: _showNotch ? const CircularNotchedRectangle() : null,
+        shape: _showNotch ? const CircularNotchedRectangle() : null, onIconPressed: () {  },
         ),
       ),
     );

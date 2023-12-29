@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:primeira_aplicacao/widgets/bottom_app_bar_demo.dart';
+import 'package:primeira_aplicacao/screens/main_screen.dart'; // Importe a tela principal aqui
 
 void main() {
-  runApp(const BottomAppBarDemo());
+  runApp(const MaterialApp(
+    home: MainScreen(), 
+  ));
 }

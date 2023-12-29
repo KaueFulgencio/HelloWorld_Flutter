@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "primeira_aplicacao",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/screens/main.dart"
+        },
+        {
+            "name": "primeira_aplicacao (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/screens/main.dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "primeira_aplicacao (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/screens/main.dart",
+            "flutterMode": "release"
+        }
+    ]
+}
