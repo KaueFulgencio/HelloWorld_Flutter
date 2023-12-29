@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:primeira_aplicacao/screens/home_screen.dart';
 
 class CustomTextFields extends StatelessWidget {
   final TextEditingController nameController;
@@ -38,6 +39,25 @@ class CustomTextFields extends StatelessWidget {
           ),
           keyboardType: TextInputType.number,
         ),
+        const SizedBox(height: 40),
+        ElevatedButton(
+        onPressed: () {
+          final String name = nameController.text;
+          final String surname = surnameController.text;
+          final String password = passwordController.text;
+
+          print('Nome: $name, Sobrenome: $surname, Senha: $password');
+
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => HomeScreen()),
+          );
+        },
+        style: ElevatedButton.styleFrom(
+          foregroundColor: Colors.white, backgroundColor: Colors.purple,
+        ),
+        child: const Text('Confirmar'),
+      ),
       ],
     );
   }
